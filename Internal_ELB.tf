@@ -46,12 +46,6 @@ resource "aws_elb" "Internal_ALB" {
     "${var.region}c",
   ]
 
-  listener {
-    instance_port     = 80
-    instance_protocol = "http"
-    lb_port           = 80
-    lb_protocol       = "http"
-  }
 
   listener {
     instance_port     = 3306
@@ -60,13 +54,13 @@ resource "aws_elb" "Internal_ALB" {
     lb_protocol       = "TCP"
   }
 
-  health_check {
-    healthy_threshold   = 2
-    unhealthy_threshold = 2
-    timeout             = 3
-    target              = "HTTP:80/"
-    interval            = 30
-  }
+  # health_check {
+  #   healthy_threshold   = 2
+  #   unhealthy_threshold = 2
+  #   timeout             = 3
+  #   target              = "HTTP:80/"
+  #   interval            = 30
+  # }
 
   cross_zone_load_balancing   = true
   idle_timeout                = 400

@@ -11,5 +11,5 @@ sudo chown -R apache:apache /var/www/html/
 sudo systemctl start httpd
 sudo systemctl enable httpd
 sudo systemctl restart httpd
-sudo setenforce 0
+
 

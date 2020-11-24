@@ -1,5 +1,5 @@
 module "webapp" {
-  source = "/home/ec2-user/project/class4"
+  source = "/home/ec2-user/Project/Terraform-ASG-Team4"
   region = "us-east-1"
 
   # max_size         = "1"
